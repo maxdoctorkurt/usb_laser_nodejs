@@ -1,0 +1,73 @@
+doctype html  
+html(lang='ru')  
+  head
+    title Управление лазером
+    style
+      include /bootstrap-4.0.0-beta.2-dist/css/bootstrap.css
+      include slider.css
+      include decorations.css
+    script
+      include /jquery-3.2.1.min.js
+      include /bootstrap-4.0.0-beta.2-dist/js/bootstrap.bundle.js
+      include slider.js
+  body
+
+    .container
+
+      h1 Панель управления лазером
+
+      .row
+        .col-10
+          h2 Мощность
+        .col-2
+          span#power_val.label.label-success.my_value 1
+        #slidecontainer
+          input#power.slider(type='range', min='1', max=power_tabs, value='1')
+          
+      .row
+        .col-10
+          h2 Длительность импульсов
+        .col-2
+          span#duration_imp_val.label.label-success.my_value 1
+        #slidecontainer
+          input#duration_imp.slider(type='range', min='1', max=duration_tabs, value='1')
+
+      .row
+        .col-10
+          h2 Интервал между импульсами
+        .col-2
+          span#duration_between_imp_val.label.label-success.my_value 1
+        #slidecontainer
+          input#duration_between_imp.slider(type='range', min='1', max=duration_tabs, value='1')
+
+      .row
+        .col-10
+          h2 Время экспозиции для смешанного режима
+        .col-2
+          span#exposure_mix_val.label.label-success.my_value 1
+        #slidecontainer
+          input#exposure_mix.slider(type='range', min='1', max=exposure_tabs, value='1')
+          
+      .row
+        .col-10      
+          h2 Время экспозиции для непрерывного режима
+        .col-2
+          span#exposure_cont_val.label.label-success.my_value 1
+        #slidecontainer
+          input#exposure_cont.slider(type='range', min='1', max=exposure_tabs, value='1')
+          
+      .row
+        .col-10
+          h2 Индекс громкости
+        .col-2
+          span#volume_val.label.label-success.my_value 1
+        #slidecontainer
+          input#volume.slider(type='range', min='1', max=volume_tabs, value='1')
+          
+      .row
+        .col-10
+          h2 Процент уровня подсветки
+        .col-2
+          span#brightness_val.label.label-success.my_value 1
+        #slidecontainer
+          input#brightness.slider(type='range', min='0', max=brightness_tabs, value='0')
